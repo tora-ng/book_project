@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: utf-8
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views
+      suffix: .jsp
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc::mariadb://localhost:3306/book_project
+    username: root
+    password: 0830
+mybatis:
+  mapper-locations:
+    - classpath*:mapper/**/*.xml
+  type-aliases-package: com.ysy.book_project.dto, **.dto

@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'war'
     id 'org.springframework.boot' version '3.1.8'
     id 'io.spring.dependency-management' version '1.1.4'
 }
@@ -27,6 +28,14 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
+
+    //JSP (Spring Boot 3.0 이후부터는 아래를 써야 함)
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.6'
 }
 
 tasks.named('bootBuildImage') {
