@@ -12,7 +12,7 @@ spring:
       suffix: .jsp
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc::mariadb://localhost:3306/book_project
+    url: jdbc:mariadb://localhost:3306/book_project
     username: root
     password: 0830
 mybatis:
