@@ -15,4 +15,9 @@ public class LibraryController {
     public String home() {
         return "/library";
     }
+
+    @GetMapping("/addBook")
+    public String addBook() {
+        return "/addBook";
+    }
 }
